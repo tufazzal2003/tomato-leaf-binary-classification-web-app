@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+/* Upload Area */
+.upload-area {
+  border: 3px dashed #28a745;
+  border-radius: 15px;
+  padding: 50px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+  display: block; /* নিশ্চিত করুন এটি দৃশ্যমান */
+}
+
+.upload-area:hover {
+  background: #f8f9fa;
+  border-color: #218838;
+  transform: scale(1.01);
+}
+
+.upload-icon {
+  font-size: 4rem;
+  color: #28a745;
+}
+
+/* Image Preview Section */
+#previewContainer {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#imagePreview {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* Step Circles */
+.step-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 15px;
+}
+
+/* Result Card Animation */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress Bar Customization */
+.progress {
+  height: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Result Icon Pulse */
+.result-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .upload-area {
+    padding: 30px 15px;
+  }
+  .upload-icon {
+    font-size: 3rem;
+  }
+}
